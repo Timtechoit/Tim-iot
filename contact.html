@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact TimTech-IoT - Get in Touch with Our Team">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>TimTech-IoT - Contact Us</title>
+</head>
+<body>
+    <div class="smooth-scroll">
+        <div class="scroll-container">
+            <button class="theme-toggle" aria-label="Toggle dark/light mode">
+                <i class="fas fa-moon" aria-hidden="true"></i>
+            </button>
+            <header>
+                <div class="menu-bar">
+                    <button class="menu-toggle" aria-label="Toggle navigation">
+                        <i class="fas fa-bars" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="./assets/images/logo.png" alt="TimTech-IoT Logo" class="logo-img">
+                        <span class="logo-text">TimTech-IoT</span>
+                    </a>
+                </div>
+        <nav class="nav" aria-label="Main navigation">
+            <ul role="menubar">
+                <li role="menuitem"><a href="index.html">Home</a></li>
+                <li role="menuitem"><a href="services.html">Services</a></li>
+                <li role="menuitem"><a href="about.html">About Us</a></li>
+                <li role="menuitem"><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="nav-overlay"></div>
+    </header>
+
+    <main>
+        <section class="hero" role="banner">
+            <h1>Contact TimTech-IoT</h1><br>
+            <p>We're here to help you connect the future</p>
+        </section>
+
+        <section class="contact-content" id="contact">
+            <div class="contact-container">
+                <div class="contact-form-section">
+                    <h2>Send Us a Message</h2>
+                    <form action="https://formsubmit.co/timtechio@gmail.com" method="POST" class="contact-form">
+                        <!-- FormSubmit Configuration -->
+                        <input type="hidden" name="_subject" value="New Contact Form Submission">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_captcha" value="true">
+                        <input type="hidden" name="_next" value="https://timtech-iot.com/thank-you.html">
+
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required 
+                                   placeholder="Your full name" aria-required="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required 
+                                   placeholder="your.email@example.com" aria-required="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone:</label>
+                            <input type="tel" id="phone" name="phone" 
+                                   placeholder="+260..." pattern="[0-9]{10,}">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject:</label>
+                            <input type="text" id="subject" name="subject" required 
+                                   placeholder="Subject of your message" aria-required="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" required 
+                                      placeholder="How can we assist you?" rows="6" 
+                                      aria-required="true"></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+
+                <div class="contact-info">
+                    <h2>Contact Information</h2>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Woodlands<br>Zambia</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p>260 962 400 843</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>support@timtech-iot.com</p>
+                    </div>
+                    <div class="social-links">
+                        <h3>Follow Us</h3>
+                        <a rel="noopener Twitter" href="https://twitter.com/timtech_iot" target="_blank" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://linkedin.com/company/timtech-iot" target="_blank" rel="noopener" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://facebook.com/timtech.iot" target="_blank" rel="noopener" aria-label="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="map">
+            <h2>Our Location</h2>
+            <div class="map-container">
+                
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.639043805873!2d-122.08424968469158!3d37.42199997982519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fba02425dad8f%3A0x6c296c66619367e0!2sGoogleplex!5e0!3m2!1sen!2sus!4v1615923494218!5m2!1sen!2sus" 
+                                        width="100%" height="400" class="map-frame" allowfullscreen="" title="Googleplex Location"></iframe>
+            </div>
+        </section>
+    </main>
+       <script src="./assets/Js/main.js"></script>
+    <footer>
+        <p>&copy; 2025 TimTech-IoT. All rights reserved. <a href="./extras/privacy.html" aria-label="Privacy Policy">Privacy Policy</a> | <a href="./extras/terms.html" aria-label="Terms of Service">Terms</a></p>
+      
+    </footer>
+</body>
+</html>

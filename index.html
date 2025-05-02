@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:url" content="https://timtech-iot.com">
+    <!-- Preload critical images -->
+    <link rel="preload" as="image" href="./assets/images/logo.png">
+    <link rel="preload" as="image" href="./assets/images/bg-1.jpg">
+    <link rel="preload" as="video" href="./assets/images/3129671-uhd_3840_2160_30fps.mp4">
+    
+    <!-- links for CSS -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/device-indicators.css">
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>TimTech-IoT - Innovative IoT Solutions</title>
+</head>
+
+<body>
+    <div class="smooth-scroll">
+        <div class="scroll-container">
+
+            <header>
+                <div class="menu-bar">
+                    <button class="menu-toggle" aria-label="Toggle navigation">
+                        <i class="fas fa-bars" aria-hidden="true"></i>
+                    </button>
+                </div>
+
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="./assets/images/logo.png" alt="TimTech-IoT Logo" class="logo-img">
+                        <span class="logo-text">TimTech-IoT</span>
+                    </a>
+                </div>
+                
+                <button class="theme-toggle" aria-label="Toggle dark/light mode">
+                    <i class="fas fa-moon" aria-hidden="true"></i>
+                </button>
+
+                <nav class="nav" aria-label="Main navigation">
+                    <ul role="menubar">
+                        <li role="menuitem"><a href="index.html">Home</a></li>
+                        <li role="menuitem"><a href="services.html">Services</a></li>
+                        <li role="menuitem"><a href="about.html">About Us</a></li>
+                        <li role="menuitem"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="nav-overlay"></div>
+            </header>
+
+            <section class="hero-index" role="banner">
+                    <video class="hero-bg-video" autoplay muted loop webkit-playsinline poster="./assets/images/bg-1.jpg">
+                        <source src="./assets/images/3129671-uhd_3840_2160_30fps.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+
+                    <div class="hero-content">
+                        <h1 class="slideshow-text">Welcome to 
+                            <span class="slideshow-word active">Innovation</span>
+                            <span class="slideshow-word">Smart</span>
+                            <span class="slideshow-word">Secure</span>
+                            <span class="slideshow-word">Fast</span>
+                            <span class="slideshow-word">Reliable</span>
+                        </h1>
+                        <p class="hero-description">Founded in November 2023, TimTech-IoT is a new company focused on smart house systems, AI-powered car monitoring for safety, and innovative solutions in health and agriculture sectors.</p>
+                        <div class="hero-buttons">
+                            <a href="#services" class="btn btn-primary">Explore Services</a>
+                            <a href="contact.html" class="btn btn-secondary">Get in Touch</a>
+                        </div>
+                    </div>
+                    
+                </section>
+
+            <main>
+                <section class="dashboard" id="dashboard">
+                    <h2>IoT Device Dashboard</h2>
+                    <div class="dashboard-grid">
+                        <div class="device-card" data-device="thermostat">
+                            <div class="device-header">
+                                <i class="fas fa-thermometer-half" aria-hidden="true"></i>
+                                <h3>Smart Thermostat</h3>
+                                <span class="device-status online"></span>
+                            </div>
+                            <div class="device-data">
+                                <p>Temperature: <span class="temp-value">22°C</span></p>
+                                <div class="device-controls">
+                                    <button class="control-btn" data-action="temp-up">+</button>
+                                    <button class="control-btn" data-action="temp-down">-</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="device-card" data-device="light">
+                            <div class="device-header">
+                                <i class="fas fa-lightbulb" aria-hidden="true"></i>
+                                <h3>Smart Light</h3>
+                                <span class="device-status online"></span>
+                            </div>
+                            <div class="device-data">
+                                <p>Status: <span class="light-status">Off</span></p>
+                                <button class="control-btn toggle-btn" data-action="toggle-light">Toggle</button>
+                            </div>
+                        </div>
+
+                        <div class="device-card" data-device="agriculture">
+                            <div class="device-header">
+                                <i class="fas fa-seedling" aria-hidden="true"></i>
+                                <h3>Smart Agriculture</h3>
+                                <span class="device-status online"></span>
+                            </div>
+                            <div class="device-data">
+                                <p>Soil Moisture: <span class="soil-moisture">45%</span></p>
+                                <p>PH Level: <span class="ph-level">6.8</span></p>
+                                <button class="control-btn" data-action="manual-irrigation">Water Now</button>
+                            </div>
+                        </div>
+
+                        <div class="device-card" data-device="vehicle">
+                            <div class="device-header">
+                                <i class="fas fa-car-side" aria-hidden="true"></i>
+                                <h3>Vehicle Safety</h3>
+                                <span class="device-status online"></span>
+                            </div>
+                            <div class="device-data">
+                                <p>Collision Risk: <span class="collision-probability">2.5%</span></p>
+                                <p>Driver Fatigue: <span class="driver-fatigue">15%</span></p>
+                                <button class="control-btn emergency-btn" data-action="emergency-stop" aria-pressed="false">EMERGENCY</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Floating chat button -->
+                <button class="chat-toggle-btn" aria-label="Toggle chat">
+                    <i class="fas fa-comments"></i>
+                </button>
+
+                <!-- Chat container -->
+                <div class="chat-container">
+                    <div class="chat-header">
+                        <h3>Smart Assistant</h3>
+                        <button class="chat-minimize">−</button>
+                    </div>
+                    <div class="chat-messages"></div>
+                    <div class="chat-input">
+                        <input type="text" placeholder="Ask me anything...">
+                        <button class="chat-send" title="Send message">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <section class="services" id="services">
+                    <h2>Our Services</h2>
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <i class="fas fa-home fa-3x" aria-hidden="true"></i>
+                            <h3>AI-Powered Smart Home</h3>
+                            <p>Intelligent home automation systems with advanced AI capabilities:</p>
+                            <ul>
+                                <li><i class="fas fa-shield-alt"></i> Smart Security</li>
+                                <li><i class="fas fa-temperature-low"></i> Climate Control</li>
+                                <li><i class="fas fa-lightbulb"></i> Automated Lighting</li>
+                                <li><i class="fas fa-door-open"></i> Access Control</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-card">
+                            <i class="fas fa-car-alt fa-3x" aria-hidden="true"></i>
+                            <h3>Vehicle Safety Systems</h3>
+                            <p>Advanced AI monitoring for automotive safety:</p>
+                            <ul>
+                                <li><i class="fas fa-eye"></i> Driver Attention Monitoring</li>
+                                <li><i class="fas fa-exclamation-triangle"></i> Collision Prevention</li>
+                                <li><i class="fas fa-tachometer-alt"></i> Performance Analytics</li>
+                                <li><i class="fas fa-map-marked-alt"></i> GPS Tracking</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-card">
+                            <i class="fas fa-microchip fa-3x" aria-hidden="true"></i>
+                            <h3>IoT Integration</h3>
+                            <p>Seamless integration of smart devices:</p>
+                            <ul>
+                                <li><i class="fas fa-network-wired"></i> Device Network Setup</li>
+                                <li><i class="fas fa-mobile-alt"></i> Mobile Control</li>
+                                <li><i class="fas fa-chart-line"></i> Real-time Analytics</li>
+                                <li><i class="fas fa-code"></i> Custom API Development</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="about" id="about">
+                    <h2>About TimTech-IoT</h2>
+                    <p>Founded in November 2023, TimTech-IoT is dedicated to delivering smart house systems, AI-powered car safety monitoring, and advanced solutions for health and agriculture. We are passionate about transforming lives and businesses with innovative IoT technology.</p>
+                    <a href="about.html" class="submit-btn">Learn More</a>
+                </section>
+
+                <section class="contact" id="contact">
+                    <h2>Contact TimTech-IoT</h2>
+                    <form id="contactForm" action="/api/contact" method="post" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" pattern="[A-Za-z ]{3,}" title="Please enter a valid name (letters and spaces only)" required placeholder="Enter your name" aria-required="true">
+
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required placeholder="Enter your email" aria-required="true">
+
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" required placeholder="Your message here" rows="5" aria-required="true"></textarea>
+                        </div>
+                        <div id="form-status" class="form-status" aria-live="polite"></div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </section>
+            </main>
+
+            <footer>
+                <p>&copy; 2025 TimTech-IoT. All rights reserved. 
+                    <a href="./extras/privacy.html" aria-label="Privacy Policy">Privacy Policy</a> | 
+                    <a href="./extras/terms.html" aria-label="Terms of Service">Terms</a>
+                </p>
+                <!-- made by Elijah Silupia All rights reserved -->
+            </footer>
+
+        </div><!-- end scroll-container -->
+    </div><!-- end smooth-scroll -->
+    <script>
+        const words = document.querySelectorAll('.slideshow-word');
+        let currentWord = 0;
+    
+        function changeWord() {
+            words[currentWord].classList.remove('active');
+            currentWord = (currentWord + 1) % words.length;
+            words[currentWord].classList.add('active');
+        }
+    
+        setInterval(changeWord, 3000); // Change word every 3 seconds
+    </script>
+    
+
+    <script src="./assets/Js/cookie-consent.js"></script>
+    <script src="./assets/Js/main.js"></script>
+</body>
+</html>

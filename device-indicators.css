@@ -1,0 +1,154 @@
+/* Temperature color indicators */
+.temp-cold {
+  border-left-color: #3498db; /* Blue for cold */
+  background: linear-gradient(to right, rgba(52, 152, 219, 0.1), var(--secondary-color));
+}
+
+.temp-cool {
+  border-left-color: #2ecc71; /* Green for cool */
+  background: linear-gradient(to right, rgba(46, 204, 113, 0.1), var(--secondary-color));
+}
+
+.temp-warm {
+  border-left-color: #f39c12; /* Orange for warm */
+  background: linear-gradient(to right, rgba(243, 156, 18, 0.1), var(--secondary-color));
+}
+
+.temp-hot {
+  border-left-color: #e74c3c; /* Red for hot */
+  background: linear-gradient(to right, rgba(231, 76, 60, 0.1), var(--secondary-color));
+}
+
+/* Light status indicators */
+.light-on {
+  border-left-color: #f1c40f; /* Yellow for on */
+  background: linear-gradient(to right, rgba(241, 196, 15, 0.15), var(--secondary-color));
+  box-shadow: 0 0 15px rgba(241, 196, 15, 0.3);
+}
+
+.light-off {
+  border-left-color: #95a5a6; /* Gray for off */
+  background: linear-gradient(to right, rgba(149, 165, 166, 0.1), var(--secondary-color));
+}
+
+/* Moisture level indicators */
+.moisture-low {
+  border-left-color: #3498db; /* Light blue for low moisture */
+  background: linear-gradient(to right, rgba(52, 152, 219, 0.1), var(--secondary-color));
+}
+
+.moisture-medium {
+  border-left-color: #2980b9; /* Medium blue for medium moisture */
+  background: linear-gradient(to right, rgba(41, 128, 185, 0.15), var(--secondary-color));
+}
+
+.moisture-high {
+  border-left-color: #1a5276; /* Dark blue for high moisture */
+  background: linear-gradient(to right, rgba(26, 82, 118, 0.2), var(--secondary-color));
+}
+
+.watering {
+  animation: watering-pulse 2s ease-in-out;
+}
+
+@keyframes watering-pulse {
+  0% { box-shadow: 0 0 0 rgba(52, 152, 219, 0); }
+  50% { box-shadow: 0 0 20px rgba(52, 152, 219, 0.5); }
+  100% { box-shadow: 0 0 0 rgba(52, 152, 219, 0); }
+}
+
+/* Emergency indicators */
+.emergency {
+  border-left-color: #e74c3c; /* Red for emergency */
+  background: linear-gradient(to right, rgba(231, 76, 60, 0.2), var(--secondary-color));
+}
+
+.emergency-pulse {
+  animation: emergency-pulse 1.5s infinite;
+}
+
+@keyframes emergency-pulse {
+  0% { box-shadow: 0 0 0 rgba(231, 76, 60, 0.4); }
+  50% { box-shadow: 0 0 20px rgba(231, 76, 60, 0.7); }
+  100% { box-shadow: 0 0 0 rgba(231, 76, 60, 0.4); }
+}
+
+.emergency-btn.active {
+  background-color: #e74c3c;
+  color: white;
+  animation: btn-pulse 1.5s infinite;
+}
+
+@keyframes btn-pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.emergency-notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #e74c3c;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  animation: slide-in 0.5s ease-out forwards, pulse-notification 1.5s infinite;
+}
+
+@keyframes slide-in {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes pulse-notification {
+  0% { box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4); }
+  50% { box-shadow: 0 4px 25px rgba(231, 76, 60, 0.7); }
+  100% { box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4); }
+}
+
+.fade-out {
+  animation: fade-out 0.5s ease-in forwards;
+}
+
+@keyframes fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+/* Power button styles */
+.power-btn {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  margin-left: auto;
+}
+
+.power-btn:hover {
+  background: rgba(0, 0, 0, 0.1);
+  transform: scale(1.1);
+}
+
+.powered-off .power-btn {
+  color: var(--device-offline);
+}
+
+/* Device power state */
+.powered-off {
+  opacity: 0.7;
+  filter: grayscale(0.5);
+}
+
+.powered-off .device-status.offline {
+  background: var(--device-offline);
+}
